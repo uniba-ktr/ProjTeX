@@ -1,0 +1,86 @@
+%===============================================================================
+% Zweck:    KTR-Seminar-Vorlage
+% Erstellt: 16.10.2007
+% Updated:  15.04.2013
+% Autor:    U.K. / M.G.
+%===============================================================================
+
+%===============================================================================
+% Zum Kompilieren pdflatex und bibtex ausführen.
+%	Konfiguration: in texmaker unter Benutzer -> Benutzerbefehle einen neuen Befehl anlegen: pdflatex -synctex=1 -interaction=nonstopmode %.tex | bibtex % | makeindex %.nlo -s nomencl.ist -o %.nls | pdflatex -synctex=1 -interaction=nonstopmode %.tex | pdflatex -synctex=1 -interaction=nonstopmode %.tex
+%	Entsprechende Informationen in den config/metainfo verändern
+% Zur Auswahl der Sprache im folgenden Befehl
+% ngerman für deutsch eintragen, english für Englisch.
+%===============================================================================
+
+% Options ngerman, english
+\newcommand{\lang}{english}
+
+\documentclass[pdftex, journal, onecolumn, a4paper, 12pt, \lang]{IEEEtran}
+
+%===============================================================================
+% zentrale Layout-Angaben und Befehle
+%===============================================================================
+\input{config/metainfo}
+\input{config/layout}
+%===============================================================================
+% LATEX-Dokument
+%===============================================================================
+
+\input{config/hyphenation}
+\begin{document}
+
+\maketitle
+
+\pagenumbering{Roman}
+\setcounter{page}{2}
+%
+\tableofcontents
+% Einstellungen f\"{u}r Literaturverzeichnis
+\newpage
+\addcontentsline{toc}{section}{\listfigurename}
+\listoffigures
+\newpage
+\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+\newpage
+\printnomenclature
+%===============================================================================
+% LATEX-Dokument: Kapitel laden
+%===============================================================================
+%
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+%
+% hier einzelne Kapitel mit \input{Kapitel-File} einf\"{u}gen
+%
+\input{chapters/introduction}
+%
+%===============================================================================
+% LATEX-Dokument: Literaturverzeichnis
+%===============================================================================
+%
+\newpage
+\phantomsection
+% Einstellungen f\"{u}r Literaturverzeichnis
+\addcontentsline{toc}{section}{\bibname}
+
+\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{literature/bib}
+% Nutzung von Bibtex:
+% hier den bib-file einbinden
+%
+% GATHER{bibfile.bib}
+% \footnotesize
+% \bibliography{bibfile}
+% ansonsten: bbl als tex Datei einbinden
+ %\input{KTR-Seminar-Literatur.tex}
+%===============================================================================
+% LATEX-Dokument: Literaturverzeichnis
+%===============================================================================
+%
+\end{document}
