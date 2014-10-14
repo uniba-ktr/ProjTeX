@@ -1,7 +1,7 @@
-ProjTeX
+SemiTeX
 =======
 
-A LaTeX template for the project submissions
+A LaTeX template for the seminar submissions
 
 Setup
 -----
