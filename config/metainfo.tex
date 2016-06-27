@@ -6,6 +6,15 @@
 % the date of the submission
 \date{\today}
 
-% What is already done
-\newcommand{\semester}{\ifthenelse{\equal{\lang}{ngerman}}{Wintersemester 2014/15}{Winter Term 2014/15}}
+\newlanguagecommand{\semester}
+\addtolanguagecommand{\semester}{english}{Winter Term 2016/17}
+\addtolanguagecommand{\semester}{ngerman}{Wintersemester 2016/17}
+
 \newcommand{\supervisor}{Prof. Dr. Udo Krieger}
+
+\newif\ifgit
+\gittrue
+
+\ifgit
+  \newcommand{\gitkeys}{\gitAbbrevHash, \gitAuthorIsoDate, \gitAuthorName }
+\fi
