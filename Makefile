@@ -1,5 +1,5 @@
 # Copyright 2016, Marcel Großmann <marcel.grossmann@uni-bamberg.de>
-objects = seminar.pdf
+objects = project.pdf
 hooks = post-checkout post-commit post-merge
 githooks = .git/hooks
 
