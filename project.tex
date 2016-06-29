@@ -14,16 +14,16 @@
 %===============================================================================
 
 \documentclass[pdftex, journal, onecolumn, a4paper, 12pt]{IEEEtran}
-
 %===============================================================================
 % zentrale Layout-Angaben und Befehle
 %===============================================================================
-\input{config/commands}
+\newcommand\meta{meta}
+\input{\meta/config/commands}
 %===============================================================================
 % LATEX-Dokument
 %===============================================================================
 
-\input{config/hyphenation}
+\input{\meta/config/hyphenation}
 \begin{document}
 %===============================================================================
 % Zum Kompilieren pdflatex und bibtex ausführen.
@@ -61,12 +61,12 @@
 % to use git tagging
 %
 \ifgit
-  \input{chapters/version}
+  \input{\meta/exampleContent/version}
 \fi
 %
 % hier einzelne Kapitel mit \input{Kapitel-File} einf\"{u}gen
 %
-\input{chapters/exampleContent}
+\input{\meta/exampleContent/exampleContent}
 %
 %===============================================================================
 % LATEX-Dokument: Literaturverzeichnis
@@ -79,7 +79,7 @@
 
 \bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
-\bibliography{literature/bib}
+\bibliography{\meta/exampleLiterature/bib}
 % Nutzung von Bibtex:
 % hier den bib-file einbinden
 %
