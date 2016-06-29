@@ -24,6 +24,8 @@ clean: cleanTemp
 	rm -f *.synctex.gz
 
 git: $(hooks)
+	git submodule init
+	git submodule update
 
 $(hooks):
 	cp gitinfo2-hook.txt $(githooks)/$@
