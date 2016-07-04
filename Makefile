@@ -1,6 +1,10 @@
 # Copyright 2016, Marcel Großmann <marcel.grossmann@uni-bamberg.de>
 objects = project.pdf
-hhooks = post-checkout post-commit post-merge
+hooks = post-checkout post-commit post-merge
+styles= gitinfo2.sty gitexinfo.sty
+bibtexstyles = IEEEtran.bst
+classes = IEEEtran.cls
+gitinfohook = meta/style/gitinfo2-hook.txt
 githooks = .git/hooks
 
 .PHONY: all init clean cleanTemp git docker
@@ -9,7 +13,7 @@ githooks = .git/hooks
 
 all: $(objects) cleanTemp
 
-init: git
+init: git $(styles) $(bibtexstyles) $(classes)
 	mkdir -p graphic code images content
 
 $(objects): %.pdf :%.tex
@@ -27,8 +31,17 @@ git: $(hooks)
 	git submodule init
 	git submodule update
 
+$(styles): %.sty : meta/style/%.sty
+	cp $^ $@
+
+$(bibtexstyles): %.bst : meta/style/%.bst
+	cp $^ $@
+
+$(classes): %.cls : meta/style/%.cls
+	cp $^ $@
+
 $(hooks):
-	cp gitinfo2-hook.txt $(githooks)/$@
+	cp $(gitinfohook) $(githooks)/$@
 	chmod u+x $(githooks)/$@
 
 docker:
