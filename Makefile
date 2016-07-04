@@ -7,13 +7,13 @@ classes = IEEEtran.cls
 gitinfohook = meta/style/gitinfo2-hook.txt
 githooks = .git/hooks
 
-.PHONY: all init clean cleanTemp git docker
+.PHONY: all init clean cleanTemp gitmodules docker
 
 .DEFAULT_GOAL := all
 
 all: $(objects) cleanTemp
 
-init: git $(styles) $(bibtexstyles) $(classes)
+init: gitmodules $(hooks) $(styles) $(bibtexstyles) $(classes)
 	mkdir -p graphic code images content
 
 $(objects): %.pdf :%.tex
@@ -27,7 +27,7 @@ clean: cleanTemp
 	latexmk -CA
 	rm -f *.synctex.gz
 
-git: $(hooks)
+gitmodules:
 	git submodule init
 	git submodule update
 
