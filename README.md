@@ -30,3 +30,7 @@ Run `make init` in the cloned directory to setup submodules and versioning of yo
 
 Use `latexmk` to generate a readable document, or use `make all` of the `Makefile`.
 If You use texmaker, set `latexmk` as your default build command
+
+## Cleaning Up
+
+Run `make clean` or `latexmk -C` to remove the generated PDF and all temporary LaTeX files.
