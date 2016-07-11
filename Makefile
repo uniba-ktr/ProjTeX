@@ -49,5 +49,12 @@ $(hooks):
 	cp $(gitinfohook) $(githooks)/$@
 	chmod u+x $(githooks)/$@
 
+# TODO Searching for a better way
+ifeq ($(base),.)
+  indocker = $(base)
+else
+  indocker = $(notdir $(CURDIR))
+endif
+
 docker:
-	docker run -it --rm -v $(CURDIR)/$(base)/:/src/ unibaktr/dock-tex:latest /bin/sh -c "cd $(notdir $(CURDIR)) && make"
+	docker run -it --rm -v $(CURDIR)/$(base)/:/src/ unibaktr/dock-tex:latest /bin/sh -c "cd $(indocker) && make"
