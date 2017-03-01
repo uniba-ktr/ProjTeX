@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/uniba-ktr/ProjTeX.svg?branch=master)](https://travis-ci.org/uniba-ktr/ProjTeX)
+
 # ProjTeX
 
 A LaTeX template for the project submissions
