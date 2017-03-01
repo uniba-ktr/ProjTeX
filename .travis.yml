@@ -10,5 +10,5 @@ deploy:
   file: project.pdf
   skip_cleanup: true
   on:
-    repo: uniba-ktr/ThesTeX
+    repo: uniba-ktr/ProjTeX
     tags: true
