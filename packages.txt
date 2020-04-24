@@ -40,3 +40,4 @@ xcolor
 xkeyval
 xstring
 zapfding
+ragged2e
