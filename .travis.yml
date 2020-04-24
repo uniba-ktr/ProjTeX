@@ -8,6 +8,7 @@ deploy:
   api_key:
     secure: VQBuFC/cf/d0idtJZo2YivoiSaRLHnbutXm+RIZzdNEtw/89+aLVDKg7WNy//s8Ivt9nBmZlJtdgudjlXEBFxZjmm8ki4ViivSrIbcyhPV2tq0pdyIOjgZskk0zeXWZ6sRIidxFUXIuKq2WUB0pR6fzVY9a6r/WjgDiWbnMpSZqEc2WU0+9C9+UDKLjDy4swc+71J3c6vb3lW0Lu/nmr38+ED3aq7WJlgOkevXlLjdaKv24AlB0Sn6ssC3nIGq9RfNe+hDoHtRb0+m2L5ibaSdEEi24b5WRIEb6UrCcF1c2tN0SOV8B0qxSEysgCqZUKpQ42wiHQ8qQjkqIjLLqrTqo8SbkLjssdbkVO1x4AFECPHOudvk6i5t0lnSFJNc+/+EbkHyseWqgiAklTwzYNznjnlJflC3tZYua/q9p/Ucg/p9gX+5rWLNBEb0HnHjrtROvOFMvaw3h/tLk70B4Az09cmzgJUnfneC1TL4eA9j7hOj4QCZA8bpm1kxlFBW1nTpL/j/l72Va0ENVxCPvnzRBYWRwON21iRoK1tRDmFA8W5xzjI7HsjXzL2ch9P5iSRHsFyLdwlKE+3ceh9ZIC68shHnEDI5EA0egNW3gSvaD6JpzOwB4rUG80b/6E06LexMfqGyErEbzQj9oTla/uIPPBIJLO6O2X/8opbM3xE9A=
   file: project.pdf
+  skip_cleanup: true
   on:
     repo: uniba-ktr/ProjTeX
     tags: true
