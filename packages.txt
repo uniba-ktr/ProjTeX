@@ -10,6 +10,7 @@ eso-pic
 etoolbox
 float
 fourier
+koma-script
 l3kernel
 l3packages
 listings
@@ -22,6 +23,7 @@ nomencl
 pgf
 pgfplots
 polynom
+ragged2e
 relsize
 setspace
 subfig
@@ -40,4 +42,3 @@ xcolor
 xkeyval
 xstring
 zapfding
-ragged2e
