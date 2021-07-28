@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/uniba-ktr/ProjTeX.svg?branch=master)](https://travis-ci.org/uniba-ktr/ProjTeX)
+[![Build Status](https://travis-ci.com/uniba-ktr/ProjTeX.svg?branch=master)](https://travis-ci.org/uniba-ktr/ProjTeX)
 
 # ProjTeX
 
