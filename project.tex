@@ -48,7 +48,13 @@
 \addcontentsline{toc}{section}{\listtablename}
 \listoftables
 \newpage
-\printnomenclature
+
+% Glossar und Akronymverzeichnis, ungenutzte Verzeichnisse bitte auskommentieren
+\printglossary[type=\acronymtype]  % list of acronyms
+\newpage
+\printglossary[type=symbolslist]   % list of symbols
+\newpage
+\printglossary[type=main]                     % main glossary
 %===============================================================================
 % LATEX-Dokument: Kapitel laden
 %===============================================================================
